@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romantic Dedication - I Love You Grace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <h1 id="love-text"></h1>
+            <div id="quotes"></div>
+            <div id="color-options">
+                <button class="color-btn" data-color="#3b3b98">Blue</button>
+                <button class="color-btn" data-color="#ff66b3">Pink</button>
+                <button class="color-btn" data-color="#ffccf9">Light Pink</button>
+            </div>
+        </div>
+        <canvas id="heart-canvas"></canvas>
+        <div id="music-control">
+            <button id="play-btn">Play Music</button>
+            <button id="pause-btn" style="display: none;">Pause Music</button>
+            <label for="volume-slider">Volume:</label>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+        </div>
+    </div>
+
+    <audio id="background-music" src="romantic-music.mp3" loop></audio>
+    <script src="script.js"></script>
+</body>
+</html>

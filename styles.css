@@ -1,0 +1,142 @@
+/* styles.css */
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(135deg, #3b3b98, #1c1c3c);
+    }
+    50% {
+        background: linear-gradient(135deg, #ffccf9, #ffb6c1);
+    }
+    100% {
+        background: linear-gradient(135deg, #3b3b98, #1c1c3c);
+    }
+}
+
+.container {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Typing animation for text */
+#love-text {
+    font-size: 4rem;
+    color: #ff66b3;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8), 0 0 15px rgba(255, 105, 180, 0.9), 0 0 30px #ff66b3;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Starts at zero width for typing effect */
+    animation: typing 5s steps(30, end) forwards, blink 0.75s step-end infinite, float 3s ease-in-out infinite alternate;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Love Quotes */
+#quotes {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 20px 0;
+    opacity: 0.8;
+    animation: fade 3s ease-in-out forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Color Options */
+#color-options {
+    margin: 20px 0;
+}
+
+.color-btn {
+    background: #ff66b3;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0 5px;
+    transition: background 0.3s;
+}
+
+.color-btn:hover {
+    background: #ff4d94;
+}
+
+/* Music controls */
+#music-control {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+}
+
+#play-btn, #pause-btn {
+    background: #ff66b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+#volume-slider {
+    margin-left: 10px;
+}
+
+/* Canvas for hearts */
+canvas#heart-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
