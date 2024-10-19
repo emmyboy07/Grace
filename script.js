@@ -125,4 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
     animate();
     typeText(); // Start typing effect
     displayQuotes(); // Start quotes display
-});
+});function init() {
+    particlesArray = [];
+    let numParticles = window.innerWidth > 600 ? 150 : 80; // Fewer particles on mobile
+    for (let i = 0; i < numParticles; i++) {
+        let size = Math.random() * 15 + 10;
+        let x = Math.random() * canvas.width;
+        let y = Math.random() * canvas.height;
+        particlesArray.push(new Heart(x, y, size));
+    }
+}
+
